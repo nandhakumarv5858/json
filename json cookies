@@ -1,0 +1,5 @@
+import requests
+r = requests.post("http://www.github.com",timeout=1)
+r.cookies['cookie_name']
+print (r.history)
+print (r.status_code)
