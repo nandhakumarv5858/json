@@ -1,0 +1,12 @@
+import json
+a=json.dumps({
+    "Name":[ {
+        "Nandhakumar":[
+                          {"tamil":34},{"english":45},{"maths":45}],
+
+        "saikumar":[
+                          {"tamil":45},{"science":42}]
+
+}]})
+c= json.loads(a)
+print len(c['Name'][0]['saikumar'])
