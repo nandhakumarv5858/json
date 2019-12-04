@@ -1,0 +1,6 @@
+import json
+a ={"name":"nandy","age":"kl"}
+y=json.dumps(a)
+print(y)
+with open('d.json', 'w') as b:
+    json.dump(a, b)
