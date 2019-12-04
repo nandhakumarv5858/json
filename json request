@@ -1,0 +1,5 @@
+import requests
+a={"name":"Nandhakumar","age":"twenty"}
+c=requests.post('http://httpbin.org/get',params=a)
+print(c.url)
+print (c.text)
