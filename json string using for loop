@@ -1,0 +1,7 @@
+import json
+a='{"info":[{"name":"sam","id":1},{"name":"joy","id":2},{"name":"mic","id":3}],"details":[{"name":"sam","des":"testing"},{"name":"joy","des":"developor"},{"name":"mic","des":"automation"}]}'
+c=json.loads(a)
+id=int(input("enter id"))
+for i in range(0,3):
+        if c["info"][i]["id"]==id:
+                print(c["details"][i])
