@@ -1,0 +1,32 @@
+from flask import *
+
+h= Flask(__name__)
+
+
+@h.route('/login', methods=['POST'])
+def login():
+    Name = request.form['Naame']
+    Passwrd = request.form['Password']
+    if Name == "Nandy" and Passwrd == "178":
+        return "Welcome %s" % Name
+
+
+if __name__ == '__main__':
+    h.run(debug=True)
+
+
+LOGIN.HTML:
+
+<html>  
+   <body>  
+      <form action = "http://127.0.0.1:5000/login" method = "post">  
+         <table>  
+        <tr><td>Name</td>  
+        <td><input type ="text" name ="Naame"></td></tr>  
+        <tr><td>Password</td>  
+        <td><input type ="password" name ="Password"></td></tr>  
+        <tr><td><input type = "submit"></td></tr>  
+    </table>  
+      </form>  
+   </body>  
+</html>  
