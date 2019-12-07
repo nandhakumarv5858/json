@@ -1,0 +1,10 @@
+from flask import  *
+a= Flask(__name__)
+@a.route('/')
+def name():
+    b=make_response("<h1>This my favourite language</h1>")
+    b.set_cookie('joy','win')
+    return b
+
+if __name__=="__main__":
+    a.run(debug=True)
